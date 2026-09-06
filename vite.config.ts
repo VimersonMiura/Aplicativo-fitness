@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  base: '/Aplicativo-fitness/',
   plugins: [
     react(),
     VitePWA({
@@ -16,6 +17,8 @@ export default defineConfig({
         background_color: '#0f172a',
         display: 'standalone',
         lang: 'pt-BR',
+        start_url: '/Aplicativo-fitness/',
+        scope: '/Aplicativo-fitness/',
         icons: [
           { src: 'icon-192.svg', sizes: '192x192', type: 'image/svg+xml', purpose: 'any maskable' },
           { src: 'icon-512.svg', sizes: '512x512', type: 'image/svg+xml', purpose: 'any maskable' },
